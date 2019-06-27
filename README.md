@@ -1,2 +1,2 @@
-# ReadNoteBoot
-阅读笔记微信小程序
+# WebSuperMarkrt
+连锁商店的微信小程序
