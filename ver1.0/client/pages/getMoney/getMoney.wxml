@@ -1,0 +1,88 @@
+<view class='container'>
+  <!--界面头部-->
+  <view class='head'>
+    <!--订单数-->
+    <view class='orderNumbers'>
+    <view class='orderNum-font'>
+      <text>销售单数量</text>
+    </view>
+    <view class='orderNum-font-num'>
+      <text>12单</text>
+    </view>
+    </view>
+    <!--订单数-->
+
+    <!--订单金额-->
+    <view class='orderMoney'>
+    <view class='orderNum-font'>
+      <text>销售金额</text>
+    </view>
+    <view  class='orderNum-font-num'>
+     <text>1400.82元</text>
+    </view>
+    </view>
+    <!--订单金额-->
+  </view>
+  <!--界面头部-->
+
+  <!--界面的主体-->
+  <view class='body'>
+    <view class='data-statis'>
+      <text>数据统计</text>
+    </view>
+    <!--界面的功能菜单-->
+    <view class='menu'>
+      <!--功能菜单页-->
+      <view class='function'> 
+        <image src='../../images/当日销售额.png' class='icon'></image> 
+        <view class='function-text' bindtap='saleRank'>
+          销售额
+        </view> 
+      </view>
+       <view class='function'>
+        <image src='../../images/会员.png' class='icon'></image> 
+        <view class='function-text'>
+          会员数量
+        </view> 
+      </view>
+       <view class='function'>
+        <image src='../../images/销量.png' class='icon' bindtap='gosale'></image> 
+        <view class='function-text'>
+          销量排行
+        </view> 
+      </view>
+      <!--功能菜单页-->
+    </view>
+    <!--界面的功能菜单-->
+     <!--收款说明-->
+      <view class='data-statis'>
+      <text>交易</text>
+      </view>
+      <!--收款说明-->
+      <!--界面的功能菜单-->
+    <view class='menu'>
+      <!--功能菜单页-->
+      <view class='function'> 
+        <image src='../../images/顾客.png' class='icon' bindtap='gocashier'></image> 
+        <view class='function-text'>
+          普通顾客
+        </view> 
+      </view>
+       <view class='function'>
+        <image src='../../images/vip.png' class='icon'></image> 
+        <view class='function-text'>
+          会员顾客
+        </view> 
+      </view>
+       <view class='function'>
+        <image src='../../images/退货.png' bindtap='returnGoods' class='icon'></image> 
+        <view class='function-text'>
+          退货处理
+        </view> 
+      </view>
+      <!--功能菜单页-->
+    </view>
+    <!--界面的功能菜单-->
+  </view>
+  <!--界面的主体-->
+</view>
