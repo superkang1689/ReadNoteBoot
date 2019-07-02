@@ -1,0 +1,51 @@
+/* pages/member/member.wxss */
+/* pages/cashier/cashier.wxss */
+page{
+   background: #F0F0F0 ;
+ } 
+.total{
+  border-radius: 20rpx;
+  padding:30px;
+  background-color: #dbdbdb;
+  margin-left: 20rpx; 
+  margin-right: 20rpx; 
+  margin-top: 50rpx;
+  margin-bottom: 10rpx;
+ }
+.name{
+  margin-top: 10rpx;
+  margin-left: 20rpx; 
+  margin-right: 20rpx; 
+  margin-bottom: 10rpx;
+  padding:15px;
+  background-color: #a4dcf3;
+}
+.quantity{
+  margin-left: 20rpx; 
+  margin-right: 20rpx; 
+  margin-bottom: 10rpx;
+  padding:15px;
+  background-color: #70bff1;
+}
+.unitPrice{
+  margin-left: 20rpx; 
+  margin-right: 20rpx; 
+  margin-bottom: 10rpx;
+  padding:15px;
+  background-color: #a4dcf3;
+}
+.submit{ 
+  margin-top: 20rpx; 
+  margin-left: 20rpx; 
+  margin-right: 20rpx; 
+  background: #00CCFF; 
+  color: #FFFFFF;
+ } 
+ .order{ 
+  margin-top: 20rpx; 
+  margin-left: 20rpx; 
+  margin-right: 20rpx; 
+  background: #47b4c7; 
+  color: #FFFFFF;
+ } 
+

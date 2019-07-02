@@ -1,0 +1,25 @@
+{
+  "pages": [
+   
+    "pages/login/login",
+    "pages/rec/rec",
+    "pages/sale/sale",
+    "pages/getMoney/getMoney",
+    "pages/reg/reg",
+    "pages/manage/manage",
+    "pages/goods/goods",
+    "pages/cashier/cashier",
+    "pages/member/member",
+    "pages/goodsList/goodsList",
+    "pages/returnGoods/returnGoods",
+    "pages/saleRank/saleRank"
+  ],
+  "window": {
+    "backgroundColor": "#6A5ACD",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#6A5ACD",
+    "navigationBarTitleText": "超市管理系统",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}
