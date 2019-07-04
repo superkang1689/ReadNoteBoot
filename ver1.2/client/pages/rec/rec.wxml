@@ -1,0 +1,23 @@
+ <view class='showInfo'>
+  <view class='title'>
+  尊贵的会员您好
+  </view> 
+  <view class='title'> 
+您当前的折扣为9折
+  </view>
+</view>	
+  <view class="hot-room mt30">
+ 
+		<view class="floor-title">热门商品 <text>HOT</text></view>	
+		<view class="hroom-list clearfix">
+			<navigator class="box-sizing" url=""><image src="../../images/hootroom1.png" alt=""></image></navigator>
+			<navigator class="box-sizing hrm-li2" url=""><image src="../../images/hootroom2.png" alt=""></image></navigator>
+			<navigator class="box-sizing" url=""><image src="../../images/hootroom3.png" alt=""></image></navigator>
+			<navigator class="box-sizing" url=""><image src="../../images/hootroom4.png" alt=""></image></navigator>
+			<navigator class="box-sizing" url=""><image src="../../images/hootroom5.png" alt=""></image></navigator>
+			<navigator class="box-sizing" url=""><image src="../../images/hootroom6.png" alt=""></image></navigator>
+		<navigator class="box-sizing" url=""><image src="../../images/hootroom7.png" alt=""></image></navigator>
+		<navigator class="box-sizing" url=""><image src="../../images/hootroom8.png" alt=""></image></navigator>
+		
+		</view>
+	</view>

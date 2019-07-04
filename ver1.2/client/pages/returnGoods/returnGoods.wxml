@@ -1,0 +1,24 @@
+<page>
+<view class="conts">
+<textarea class="areas" placeholder='货名'  bindinput="getName">
+
+</textarea>
+
+<textarea class="areas" placeholder='货量'  bindinput="getNumbers">
+
+</textarea>
+
+
+<textarea class="areas" placeholder='单价'  bindinput="getPrice">
+
+</textarea>
+
+
+
+<textarea class="areas" placeholder='退货理由' minlength="{{min}}" maxlength="{{max}}" bindinput="inputs">
+<text class="currentWordNumber">{{currentWordNumber|0}}/{{max}}</text>
+<text class="hint">{{texts}}</text>
+</textarea>
+</view>
+<button class="but" bindtap='returnGoods'>退货</button>
+</page>

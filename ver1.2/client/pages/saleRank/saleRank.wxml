@@ -1,0 +1,26 @@
+<view class="head">连锁商店本月份商品销售额清单</view>
+<view class='container'>
+  <!-- 订单列表 -->
+  <block wx:for-items="{{goodsList}}">
+    <view class='card  b-shadow' bindtap='toggleBtn' id="{{item.id}}">
+      <view class='nearCard-fl'>
+      </view>
+      <view class='nearCard-fr'>
+        <view class="te">名称：    
+          <text>{{item.name}}</text>
+      </view>
+        <view class="te">商品种类：
+          <text>{{item.brand}}</text>
+        </view>
+      </view>
+      <view class='down clearfix {{uhide==item.id?"":"hidden"}}'>
+        
+        <view class="sale">单价：
+          <text>{{item.money}}</text>
+        </view>
+        <view class="sale">月销售额：{{item.allMoney}}</view>
+      </view>
+    </view>
+  </block>
+</view>
+<view class="bottom">月总销售额：{{sum}}</view>

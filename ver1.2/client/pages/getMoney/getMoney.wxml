@@ -1,0 +1,88 @@
+<view class='container'>
+  <!--界面头部-->
+  <view class='head'>
+    <!--订单数-->
+    <view class='orderNumbers'>
+    <view class='orderNum-font'>
+      <text>销售单数量</text>
+    </view>
+    <view class='orderNum-font-num'>
+      <text>{{types}}单</text>
+    </view>
+    </view>
+    <!--订单数-->
+
+    <!--订单金额-->
+    <view class='orderMoney'>
+    <view class='orderNum-font'>
+      <text>销售金额</text>
+    </view>
+    <view  class='orderNum-font-num'>
+     <text>{{sum}}元</text>
+    </view>
+    </view>
+    <!--订单金额-->
+  </view>
+  <!--界面头部-->
+
+  <!--界面的主体-->
+  <view class='body'>
+    <view class='data-statis'>
+      <text>数据统计</text>
+    </view>
+    <!--界面的功能菜单-->
+    <view class='menu'>
+      <!--功能菜单页-->
+      <view class='function'> 
+        <image src='../../images/money.png' class='icon' bindtap='saleRank'></image> 
+        <view class='function-text'>
+          销售排行
+        </view> 
+      </view>
+       <view class='function'>
+        <image src='../../images/base.png' class='icon' bindtap='goGoodsNum'></image> 
+        <view class='function-text'>
+          库存量
+        </view> 
+      </view>
+       <view class='function'>
+        <image src='../../images/number.png' class='icon' bindtap='gosale'></image> 
+        <view class='function-text'>
+          销量排行
+        </view> 
+      </view>
+      <!--功能菜单页-->
+    </view>
+    <!--界面的功能菜单-->
+     <!--收款说明-->
+      <view class='data-statis'>
+      <text>交易</text>
+      </view>
+      <!--收款说明-->
+      <!--界面的功能菜单-->
+    <view class='menu'>
+      <!--功能菜单页-->
+      <view class='function'> 
+        <image src='../../images/customer.png' class='icon' bindtap='gocashier'></image> 
+        <view class='function-text'>
+          普通顾客
+        </view> 
+      </view>
+       <view class='function'>
+        <image src='../../images/vip.png' class='icon'  bindtap='goVip'></image> 
+        <view class='function-text'>
+          会员顾客
+        </view> 
+      </view>
+       <view class='function'>
+        <image src='../../images/return.png' bindtap='returnGoods' class='icon'></image> 
+        <view class='function-text'>
+          退货处理
+        </view> 
+      </view>
+      <!--功能菜单页-->
+    </view>
+    <!--界面的功能菜单-->
+  </view>
+  <!--界面的主体-->
+</view>
