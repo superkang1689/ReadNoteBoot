@@ -1,0 +1,22 @@
+<view class="table">
+ <view class="tr bg-w">
+ <view class="th">商品名称</view>
+ <view class="th">价格</view>
+ <view class="th ">数量</view>
+ <view class="th ">全选/取消全选</view>
+ </view>
+ <block wx:for="{{listData}}" wx:key="{[code]}">
+ <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
+  <view class="td">{{item.code}}</view>
+  <view class="td">{{item.text}}</view>
+  <view class="td">{{item.type}}</view>
+   <view class="td">{{item.ture}}</view>
+ </view>
+ <view class="tr" wx:else>
+  <view class="td">{{item.code}}</view>
+  <view class="td">{{item.text}}</view>
+  <view class="td">{{item.type}}</view>
+   <view class="td">{{item.ture}}</view>
+ </view>
+ </block>
+</view>

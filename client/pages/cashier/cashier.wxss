@@ -1,0 +1,105 @@
+/* pages/cashier/cashier.wxss */
+page{
+   background: #F0F0F0 ;
+ } 
+.total{
+  border-radius: 20rpx;
+  padding:30px;
+  background-color: #dbdbdb;
+  margin-left: 20rpx; 
+  margin-right: 20rpx; 
+  margin-top: 50rpx;
+  margin-bottom: 10rpx;
+ }
+.name{
+  margin-top: 10rpx;
+  margin-left: 20rpx; 
+  margin-right: 20rpx; 
+  margin-bottom: 10rpx;
+  padding:15px;
+  background-color: #a4dcf3;
+}
+.quantity{
+  margin-left: 20rpx; 
+  margin-right: 20rpx; 
+  margin-bottom: 10rpx;
+  padding:15px;
+  background-color: #70bff1;
+}
+.unitPrice{
+  margin-left: 20rpx; 
+  margin-right: 20rpx; 
+  margin-bottom: 10rpx;
+  padding:15px;
+  background-color: #a4dcf3;
+}
+.submit{ 
+  margin-top: 20rpx; 
+  margin-left: 20rpx; 
+  margin-right: 20rpx; 
+  background: #00CCFF; 
+  color: #FFFFFF;
+ } 
+ .order{ 
+  margin-top: 20rpx; 
+  margin-left: 20rpx; 
+  margin-right: 20rpx; 
+  background: #4fa8b8; 
+  color: #FFFFFF;
+ } 
+.head{
+  width: 100%;
+  background: #4fa8b8;
+  height: 500rpx;
+  text-align: center;
+  font-size: 50rpx;
+  font-family: 楷体;
+  font-weight: 900;
+}
+
+
+
+.history-table-wrap{
+  position: absolute;
+  width: 668rpx;
+  height: 400rpx;
+  left: 50%;
+  margin-left: -334rpx;
+  top: 70rpx;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+/* 表格代码   */
+.table{
+  border:1px solid #dadada;
+  border-right:0;
+  border-bottom: 0;
+  width: 98%;
+  margin-left: 1%;
+}
+.tr{
+  width:100%;
+  display: flex;
+  justify-content: space-between;
+}
+.th,.td{
+  padding: 10px;
+  border-bottom: 1px solid #dadada;
+  border-right: 1px solid #dadada;
+  text-align: center;
+  width: 100%;
+}
+.th1,.th2,.td1,.td2{
+  width: 40%;
+  height: 20rpx;
+}
+.th{
+  font-weight: 800;
+  background-color: #b66242;
+  font-size: 28rpx;
+  color: #330e0e;
+}
+.td{
+  font-size: 20rpx;
+  color: #ec9480;
+}

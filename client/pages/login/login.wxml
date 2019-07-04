@@ -1,0 +1,32 @@
+<view class='main'>
+  <view class='header'>
+    <text class='title'>连锁超市管理系统</text>
+  </view>
+  <view class='body'>
+    <image src='http://img2.imgtn.bdimg.com/it/u=2812882568,3768369442&fm=26&gp=0.jpg' class='login-image'></image>
+    <form bindsubmit='submit'>
+      <view class='username'>
+        <text>用户名：</text>
+        <input placeholder='账号/手机号/微信/QQ' name="username" bindinput='getUserName' ></input>
+      </view>
+      <view class='password'>
+        <text>密  码：</text>
+        <input password='true' name="pwd" placeholder='请输入你的密码' bindinput='getPassWord'></input>
+      </view>
+      <!--选择登录方式-->
+      
+      <view class='choosetype'>
+      <radio-group class="radio-group" bindchange="radioChange">
+        <label class="radio" wx:for="{{items}}">
+          <radio value="{{item.name}}" checked="{{item.checked}} class='radio'"/>{{item.value}}
+        </label>
+      </radio-group>
+      </view>
+
+      <view>
+        <button form-type='submit'>登录</button>
+        <button bindtap='goRegister'>注册</button>
+      </view>
+    </form>
+  </view>
+</view>

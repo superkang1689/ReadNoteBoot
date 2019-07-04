@@ -1,0 +1,11 @@
+<!--pages/cashier/cashier.wxml-->
+<view class='total'>
+<text>当前商品总额：</text></view>
+<input  class= 'name' 
+placeholder="请输入商品名称" /> 
+<input class='quantity'
+placeholder="请输入商品数量" />
+<input class='unitPrice'
+placeholder='请输入商品单价' />
+<button class='submit' bindtap='submit'>提交</button>
+<button class='order' bindtap='order'>生成订单</button>

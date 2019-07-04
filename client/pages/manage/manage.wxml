@@ -1,0 +1,137 @@
+<view class='topTabSwiper'>
+    <view class='tab  {{currentData == 0 ? "tabBorer" : ""}}'  data-current = "0" bindtap='checkCurrent'>收银员</view>
+    <view class='tab  {{currentData == 1 ? "tabBorer" : ""}}'  data-current = "1" bindtap='checkCurrent'>客户经理</view>
+    <view class='tab  {{currentData == 2 ? "tabBorer" : ""}}'  data-current = "2" bindtap='checkCurrent'>总经理</view>
+</view>
+<view class="title">
+  <view class="title_item">工号</view>
+  <view class="title_item">姓名</view>
+  <view class="title_item">性别</view>
+  <view class="title_item">年龄</view>
+</view>
+<swiper current="{{currentData}}" class='swiper' style="height:600px;" duration="200" bindchange="bindchange">
+  <swiper-item>
+    <view class='swiper_con'> 
+<view class="search">
+<icon class="searchicon" size='20' type='search'></icon>  
+<input class="aaa" placeholder="请输入工号或姓名" bindinput="inputsearch" value="{{search}}"/>
+<button class="btn_search" bindtap='btn_search' size='mini'>搜索</button>
+</view>
+<checkbox class="check"  bindtap="selectall">反选</checkbox>
+<button class='btn_add' type="default" bindtap='btn_add' size='mini'>添加</button>
+<modal hidden="{{hiddenmodalput}}" title="请输入新员工信息" confirm-text="提交" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm" name="add11"> 
+    <input class="text" type='text'placeholder="请输入工号"  bindinput="inputnum"  value="{{num}}" auto-focus/>
+    <input class="text" type='text'placeholder="请输入姓名" bindinput="inputname" value="{{name}}" auto-focus/>
+    <input class="text" type='text'placeholder="请输入性别" bindinput="inputsex" value="{{sex}}"  auto-focus/>
+    <input class="text" type='text'placeholder="请输入年龄" bindinput="inputage" value="{{age}}"  auto-focus/>
+</modal>
+<button class='btn_delete' type="warn" bindtap='btn_delete' size='mini'>删除</button>
+<button class='btn_change' type="default" bindtap='btn_change' size='mini'>修改</button>
+<modal hidden="{{hiddenmodalput1}}" title="请输入修改后信息" confirm-text="提交" cancel-text="取消" bindcancel="cancel1" bindconfirm="confirm1" name="change1">
+  <input class="text" type='text' placeholder="请输入工号" bindinput="inputnum1" value="{{num1}}"auto-focus/>
+  <input class="text" type='text' placeholder="请输入姓名" bindinput="inputname1" value="{{name1}}"  auto-focus/>
+  <input class="text" type='text' placeholder="请输入性别" bindinput="inputsex1" value="{{sex1}}"auto-focus/>
+  <input class="text" type='text' placeholder="请输入年龄" bindinput="inputage1" value="{{age1}}"auto-focus/>
+</modal>
+<checkbox-group bindchange="checkboxChange">
+ <view class="intro" wx:for="{{listData}}" wx:key="listData">
+  <view class="td" >
+<checkbox class="checkbox"  data-index="{{index}}" value="{{index}}" checked="{{isSelect1[index]}}" bindtap='select' />
+</view>
+    <view class="info" value="{{item.name}}"><text decode="{{true}}">&nbsp;&nbsp;</text>{{item.id}}<text decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text></view>
+    <view class="info" value="{{item.name}}">{{item.name}}<text decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text></view>
+    <view class="info" value="{{item.name}}">{{item.sex}}<text decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text></view>
+    <view class="info" value="{{item.name}}">{{item.age}}</view>
+  </view>
+</checkbox-group>
+</view>
+</swiper-item>
+
+
+
+
+
+
+
+<swiper-item>
+<view class='swiper_con'> 
+<view class="search">
+<icon class="searchicon" size='20' type='search'></icon>  
+<input class="aaa" placeholder="请输入工号或姓名" bindinput="inputsearch1" value="{{search1}}"/>
+<button class="btn_search" bindtap='btn_search1' size='mini'>搜索</button>
+</view>
+<checkbox class="check"  bindtap="selectall1">反选</checkbox>
+<button class='btn_add' type="default" bindtap='btn_add1' size="mini">添加</button>
+<modal hidden="{{hiddenmodalput2}}" title="请输入新员工信息" confirm-text="提交" cancel-text="取消" bindcancel="cancel2" bindconfirm="confirm2" name="add11"> 
+    <input class="text" type='text'placeholder="请输入工号"  bindinput="inputnum2"  value="{{num2}}" auto-focus/>
+    <input class="text" type='text'placeholder="请输入姓名" bindinput="inputname2" value="{{name2}}" auto-focus/>
+    <input class="text" type='text'placeholder="请输入性别" bindinput="inputsex2" value="{{sex2}}"  auto-focus/>
+    <input class="text" type='text'placeholder="请输入年龄" bindinput="inputage2" value="{{age2}}"  auto-focus/>
+</modal>
+<button class='btn_delete' type="warn" bindtap='btn_delete1' size="mini">删除</button>
+<button class='btn_change' type="default" bindtap='btn_change1' size="mini">修改</button>
+<modal hidden="{{hiddenmodalput3}}" title="请输入修改后信息" confirm-text="提交" cancel-text="取消" bindcancel="cancel3" bindconfirm="confirm3" name="change1">
+  <input class="text" type='text' placeholder="请输入工号" bindinput="inputnum3" value="{{num3}}"auto-focus/>
+  <input class="text" type='text' placeholder="请输入姓名" bindinput="inputname3" value="{{name3}}"  auto-focus/>
+  <input class="text" type='text' placeholder="请输入性别" bindinput="inputsex3" value="{{sex3}}"auto-focus/>
+  <input class="text" type='text' placeholder="请输入年龄" bindinput="inputage3" value="{{age3}}"auto-focus/>
+</modal>
+<checkbox-group bindchange="checkboxChange">
+ <view class="intro" wx:for="{{listData1}}" wx:key="listData1">
+  <view class="td" >
+<checkbox class="checkbox"  data-index="{{index}}" value="{{index1}}" checked="{{isSelect2[index]}}" bindtap='select1' />
+</view>
+    <view class="info" value="{{item.name}}"><text decode="{{true}}">&nbsp;&nbsp;</text>{{item.id}}<text decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text></view>
+    <view class="info" value="{{item.name}}">{{item.name}}<text decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text></view>
+    <view class="info" value="{{item.name}}">{{item.sex}}<text decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text></view>
+    <view class="info" value="{{item.name}}">{{item.age}}</view>
+  </view>
+</checkbox-group>
+
+</view>
+</swiper-item>
+
+
+
+
+
+
+
+  <swiper-item>
+    <view class='swiper_con'> 
+<view class="search">
+<icon class="searchicon" size='20' type='search'></icon>  
+<input class="aaa" placeholder="请输入工号或姓名" bindinput="inputsearch2" value="{{search2}}"/>
+<button class="btn_search" bindtap='btn_search2' size='mini'>搜索</button>
+</view>
+<checkbox class="check"  bindtap="selectall2">反选</checkbox>
+<button class='btn_add' type="default" bindtap='btn_add2' size="mini">添加</button>
+<modal hidden="{{hiddenmodalput4}}" title="请输入新员工信息" confirm-text="提交" cancel-text="取消" bindcancel="cancel4" bindconfirm="confirm4" name="add11"> 
+    <input class="text" type='text'placeholder="请输入工号"  bindinput="inputnum4"  value="{{num4}}" auto-focus/>
+    <input class="text" type='text'placeholder="请输入姓名" bindinput="inputname4" value="{{name4}}" auto-focus/>
+    <input class="text" type='text'placeholder="请输入性别" bindinput="inputsex4" value="{{sex4}}"  auto-focus/>
+    <input class="text" type='text'placeholder="请输入年龄" bindinput="inputage4" value="{{age4}}"  auto-focus/>
+</modal>
+<button class='btn_delete' type="warn" bindtap='btn_delete2' size="mini">删除</button>
+<button class='btn_change' type="default" bindtap='btn_change2' size="mini">修改</button>
+<modal hidden="{{hiddenmodalput5}}" title="请输入修改后信息" confirm-text="提交" cancel-text="取消" bindcancel="cancel5" bindconfirm="confirm5" name="change1">
+  <input class="text" type='text' placeholder="请输入工号" bindinput="inputnum5" value="{{num5}}"auto-focus/>
+  <input class="text" type='text' placeholder="请输入姓名" bindinput="inputname5" value="{{name5}}"  auto-focus/>
+  <input class="text" type='text' placeholder="请输入性别" bindinput="inputsex5" value="{{sex5}}"auto-focus/>
+  <input class="text" type='text' placeholder="请输入年龄" bindinput="inputage5" value="{{age5}}"auto-focus/>
+</modal>
+<checkbox-group bindchange="checkboxChange">
+ <view class="intro" wx:for="{{listData2}}" wx:key="listData2">
+  <view class="td" >
+<checkbox class="checkbox"  data-index="{{index}}" value="{{index2}}" checked="{{isSelect3[index]}}" bindtap='select2' />
+</view>
+    <view class="info" value="{{item.name}}"><text decode="{{true}}">&nbsp;&nbsp;</text>{{item.id}}<text decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text></view>
+    <view class="info" value="{{item.name}}">{{item.name}}<text decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text></view>
+    <view class="info" value="{{item.name}}">{{item.sex}}<text decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text></view>
+    <view class="info" value="{{item.name}}">{{item.age}}</view>
+  </view>
+</checkbox-group>
+
+</view>
+</swiper-item>
+</swiper>
