@@ -1,0 +1,33 @@
+<!--pages/rank/rank.wxml-->
+<view class="title">、
+  <view class="title_item" bindtap="rank1">按销售量排行</view>
+  <view class="title_item" bindtap="rank2"></view>
+  </view>
+  <view class='container'>
+  <!-- 订单列表 -->
+  <block wx:for-items="{{goodList}}">
+    <view class='card  b-shadow' bindtap='toggleBtn' id="{{item.id}}">
+      <view class='nearCard-fl'>
+      </view>
+      <view class='nearCard-fr'>
+        <view class="id">
+        <text>{{item.id}}</text>
+        </view>
+        <view class="te">品牌：    
+          <text>{{item.brand}}</text>
+      </view>
+        <view class="te">商品种类：
+          <text>{{item.name}}</text>
+        </view>
+      </view>
+      <view class='down clearfix {{uhide==item.id?"":"hidden"}}'>
+        
+        <view class="sale">单价：
+          <text>{{item.money}}</text>
+        </view>
+        <view class="sale">月销售量：{{item.numbers}}</view>
+         <view class="sale">月销售额：{{item.allMoney}}</view>
+      </view>
+    </view>
+  </block>
+</view>

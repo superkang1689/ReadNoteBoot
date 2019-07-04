@@ -1,0 +1,39 @@
+.main{
+  width: 100%;
+  background-color: #a4dcf3;
+  height: 555px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: url(https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=234019880,1505346957&fm=26&gp=0.jpg)
+}
+.title{
+  color: blue;
+  font-size: 30px;
+}
+input{
+  border: 1px solid #eee;
+  width: 300px;
+  height: 40px;
+  margin: 20px 0px;
+}
+button{
+  float: left;
+  font-size: 20px;
+  margin-left: 50px;
+  background-color: blue;
+  color: white;
+}
+.choosetype{
+  width: 100%;
+  font-size: 25rpx;
+
+}
+.login-image{
+  width: 100%;
+  height: 350rpx;
+}
+.radio{
+  width: 20rpx;
+  height: 20rpx;
+}
