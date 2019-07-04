@@ -1,0 +1,31 @@
+<view class='head'>
+  <text>总价格:{{total}}</text>
+    <!--表格-->
+<view>
+  <view class='history-table-wrap'>
+    <view class="table">
+      <view class="tr">
+          <view class="th th1">类别</view>
+          <view class="th th1">购买数量</view>
+          <view class="th th1">单价</view>
+          <view class="th th1">总价</view>
+      </view>
+      <view class="tr" wx:for="{{bookList}}">
+          <view class="td td1">{{item[0]}}</view>
+          <view class="td td1">{{item[1]}}</view>
+          <view class="td td1">{{item[2]}}</view>
+          <view class="td td1">{{item[3]}}</view>
+      </view>
+    </view>
+ </view>
+</view>  
+
+</view>
+
+<input class= 'name' 
+placeholder="请输入商品名称" bindinput='getGoodsName'/> 
+<input id="input1" class='quantity'
+placeholder="请输入商品数量" bindinput='getGoodsNumbers' />
+<input id="input2" class='unitPrice' placeholder='请输入商品品牌' bindinput='getGoodsbrand' />
+<button class='submit' bindtap='multiplication'>确认</button>
+<button class='order' bindtap='order'>生成订单</button>

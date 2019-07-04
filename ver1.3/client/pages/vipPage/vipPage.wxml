@@ -1,0 +1,13 @@
+<!--pages/reg/reg.wxml-->
+ <view class='row'> 
+ <view class='info'> 
+ <input  class= 'info-input1' bindinput="getId" 
+ placeholder="显示用户名" /> 
+ </view>
+<view>
+<input password='true'  class='info-input1' bindinput="getPassword" 
+ placeholder="请输入密码" /> 
+ </view>
+ </view>
+
+ <button class='health' bindtap='login'>登录</button>

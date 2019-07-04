@@ -1,0 +1,98 @@
+<view class="T">
+<button class="top" bindtap='btn_add'>增加</button>
+<modal hidden="{{hiddenmodalput}}" title="请输入商品信息" confirm-text="提交" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm">
+    <input class="text" type='text'placeholder="请输入商品id"bindinput="inputid" value="{{id}}"auto-focus/>
+    <input class="text" type='text'placeholder="请输入商品名称"bindinput="inputname"value="{{name}}" auto-focus/>
+    <input class="text" type='text'placeholder="请输入数目" bindinput="inputnumbers"value="{{numbers}}"auto-focus/>
+    <input class="text" type='text'placeholder="请输入保质期" bindinput="inputqualityTime"value="{{qualityTime}}"auto-focus/>
+    <input class="text" type='text'placeholder="请输入购买日期"bindinput="inputbuyTime"value="{{buyTime}}" auto-focus/>
+    <input class="text" type='text'placeholder="请输入最近一次进货日期"bindinput="inputlastOutTime" value="{{lastOutTime}}"auto-focus/>
+    <input class="text" type='text'placeholder="请输入今天日期"bindinput="inputtoday" value="{{today}}"auto-focus/>
+    <input class="text" type='text'placeholder="请输入品牌"bindinput="inputbrand" value="{{brand}}"auto-focus/>
+    <input class="text" type='text'placeholder="请输入单价"bindinput="inputprice" value="{{price}}" auto-focus/>
+</modal>
+<button class="top" bindtap='btn_delete'>删除</button>
+
+<button class="top"  bindtap='btn_change'>修改</button>
+<modal hidden="{{hiddenmodalput1}}" title="请输入修改后信息" confirm-text="提交" cancel-text="取消" bindcancel="cancel1" bindconfirm="confirm1" >
+    <input class="text" type='text'placeholder="请输入商品id"bindinput="inputid1" value="{{id}}"auto-focus/>
+    <input class="text" type='text'placeholder="请输入商品名称"bindinput="inputname1"value="{{name}}" auto-focus/>
+    <input class="text" type='text'placeholder="请输入数目" bindinput="inputnumbers1"value="{{numbers}}"auto-focus/>
+    <input class="text" type='text'placeholder="请输入保质期" bindinput="inputqualityTime1"value="{{qualityTime}}"auto-focus/>
+    <input class="text" type='text'placeholder="请输入购买日期"bindinput="inputbuyTime1"value="{{buyTime}}" auto-focus/>
+    <input class="text" type='text'placeholder="请输入最近一次进货日期"bindinput="inputlastOutTime1" value="{{lastOutTime}}"auto-focus/>
+    <input class="text" type='text'placeholder="请输入今天日期"bindinput="inputtoday1" value="{{today}}"auto-focus/>
+    <input class="text" type='text'placeholder="请输入品牌"bindinput="inputbrand1" value="{{brand}}"auto-focus/>
+    <input class="text" type='text'placeholder="请输入单价"bindinput="inputprice1" value="{{price}}" auto-focus/>
+</modal>
+
+</view>
+
+
+ <block wx:for="{{listData}}" wx:key="{[id]}"> </block>
+<scroll-view class="quotation-wrapper" style="height:{{wHeight}}px;" scroll-y="true" bindscroll="scroll" bindscrolltoupper="scrolltoupper" bindscrolltolower="scrolltolower">
+
+
+<scroll-view  class="table"scroll-x="true">
+ <view class="tr bg-w" style="{{thStyle}}">
+<view class="th">
+
+<checkbox value="all" bindtap="selectall"  />反选
+
+</view>
+ <view class="th">商品id</view>
+ <view class="th">名称</view>
+ <view class="th ">数目</view>
+ <view class="th ">保质期</view>
+ <view class="th ">购买时间</view>
+ <view class="th ">最近一次</view>
+ <view class="th ">今天日期</view>
+ <view class="th ">品牌</view>
+ <view class="th ">单价</view>
+ </view>
+
+ <block wx:for="{{goodInfo}}" wx:key="{[item.id]}">
+ <view class="tr bg-g" wx:if="{{index == 0}}">
+ <view></view>
+ </view>
+ <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
+ <view class="td">
+
+<checkbox  data-index="{{index}}" value="{{index}}" checked="{{isSelect1[index]}}" bindtap="selectItem"  />
+
+</view>
+
+
+ 
+  <view class="td">{{item.id}}</view>
+  <view class="td">{{item.name}}</view>
+  <view class="td">{{item.numbers}}</view>
+   <view class="td">{{item.qualityTime}}</view>
+   <view class="td">{{item.buyTime}}</view>
+   <view class="td">{{item.lastOutTime}}</view>
+   <view class="td">{{item.today}}</view>
+   <view class="td">{{item.brand}}</view>
+   <view class="td">{{item.price}}</view>
+ </view>
+ <view class="tr" wx:else>
+ <view class="td">
+
+<checkbox data-index="{{index}}" value="{{index}}" checked="{{isSelect1[index]}}" bindtap="selectItem" />
+
+</view>
+   <view class="td">{{item.id}}</view>
+  <view class="td">{{item.name}}</view>
+ <view class="td">{{item.numbers}}</view>
+   <view class="td">{{item.qualityTime}}</view>
+   <view class="td">{{item.buyTime}}</view>
+   <view class="td">{{item.lastOutTime}}</view>
+   <view class="td">{{item.today}}</view>
+   <view class="td">{{item.brand}}</view>
+   <view class="td">{{item.price}}</view>
+ </view>
+ </block>
+ 
+
+</scroll-view>
+</scroll-view>
+
